@@ -1,0 +1,44 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="Страница — 1" id="ALKHWWUusK0b_Jfh5fd8">
+    <mxGraphModel dx="2258" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kctbTCnONGjUV7CTLq_L-1" value="CORE Switch&lt;div&gt;172.16.7.5&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="300" y="140" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="kctbTCnONGjUV7CTLq_L-2" target="kctbTCnONGjUV7CTLq_L-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-12" value="Po100 ten31-32 (PeerLink)&lt;div&gt;Po101 ten29-30 (Keepailve)&lt;/div&gt;&lt;div&gt;172.16.7.49 ↔ 172.16.7.50&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="kctbTCnONGjUV7CTLq_L-11" vertex="1" connectable="0">
+          <mxGeometry x="0.022" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-2" value="ELTEX MES5332A&lt;br&gt;PRIMARY&lt;div&gt;172.16.10.228&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="340" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-3" value="ELTEX MES5332A&lt;br&gt;SECONDARY&lt;div&gt;172.16.10.238&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="500" y="340" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-4" value="ten1/2/6 ↔ ten1/1&#xa;Po1 (LACP)" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="kctbTCnONGjUV7CTLq_L-1" target="kctbTCnONGjUV7CTLq_L-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-5" value="ten1/1/6 ↔ ten1/1&#xa;Po1 (LACP)" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="kctbTCnONGjUV7CTLq_L-1" target="kctbTCnONGjUV7CTLq_L-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-13" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;MLAG Eltex MES5332A&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="310" y="48" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-16" value="Primary:&#xa;show vpc&#xa;  VPC is enabled&#xa;  VPC domain         1&#xa;    VPC role         Primary&#xa;    peer             detected (peer-link)&#xa;    role-priority    1&#xa;    peer keepalive   enabled&#xa;    system priority  32768&#xa;    peer detection   enabled&#xa;    peer link        Po100&#xa;show vpc peer-detection&#xa;  VPC domain  1&#xa;    Peer IP address................................ 172.16.7.50&#xa;    Source IP address.............................. 172.16.7.49&#xa;    UDP port....................................... 50000&#xa;    Peer detection admin status.................... Enabled&#xa;    Peer detection operational status.............. Up&#xa;    Peer is detected............................... detected&#xa;    Configured Tx interval......................... 200 milliseconds&#xa;    Configured Rx timeout.......................... 5000 milliseconds" style="text;whiteSpace=wrap;fontStyle=2;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="51" y="440" width="350" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="kctbTCnONGjUV7CTLq_L-17" value="Secondary:&#xa;show vpc&#xa;  VPC is enabled&#xa;  VPC domain         1&#xa;    VPC role         Secondary&#xa;    peer             detected (peer-link)&#xa;    role-priority    2&#xa;    peer keepalive   enabled&#xa;    system priority  32768&#xa;    peer detection   enabled&#xa;    peer link        Po100&#xa;show vpc peer-detection&#xa;  VPC domain  1&#xa;    Peer IP address................................ 172.16.7.49&#xa;    Source IP address.............................. 172.16.7.50&#xa;    UDP port....................................... 50000&#xa;    Peer detection admin status.................... Enabled&#xa;    Peer detection operational status.............. Up&#xa;    Peer is detected............................... detected&#xa;    Configured Tx interval......................... 200 milliseconds&#xa;    Configured Rx timeout.......................... 5000 milliseconds" style="text;whiteSpace=wrap;fontStyle=2;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="455" y="440" width="350" height="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
